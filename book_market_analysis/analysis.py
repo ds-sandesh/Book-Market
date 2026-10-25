@@ -24,8 +24,12 @@ plt.savefig("Number of books.png", bbox_inches= "tight")
 plt.show()
 
 #Question 3: Which categories are the most expensive?
-price_by_cat = df.groupby("category")["price"].mean().sort_values(ascending=False)
-print(price_by_cat.head(10))
+price_by_cat = df.groupby("category").agg(
+    avg_price = ("price","mean"),
+    book_count = ("title", "count")
+)
+big = price_by_cat[price_by_cat["book_count"] >= 10]
+print(big.sort_values("avg_price", ascending=False).head(10).round(2))
 
 price_by_cat.head(10).plot(kind="barh", title= "Most expensive categories (Avg Price)")
 plt.xlabel("Average Price (£)")
