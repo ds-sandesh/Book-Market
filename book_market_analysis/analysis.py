@@ -45,7 +45,7 @@ big = rating_by_cat[rating_by_cat["book_count"] >= 10]
 print(big.sort_values("avg_rating", ascending=False).head(10))
 
 #Question 5: Do expensive books get better results?
-print(df["price"].corr(df["rating"]))
+print("The correlation of Price and Rating is:", df["price"].corr(df["rating"]))
 
 plt.scatter(df["price"],df["rating"], alpha = 0.3)
 plt.xlabel("Price ()")
