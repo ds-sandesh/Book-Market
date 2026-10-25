@@ -1,4 +1,3 @@
-<img width="745" height="416" alt="Screenshot 2026-10-25 093938" src="https://github.com/user-attachments/assets/c543d291-c94a-4796-9ad3-91a081cd0743" /># 
 📚 Book Market Analysis Dashboard
 
 An end-to-end data analytics project: I scraped 1,000 books from a website,
